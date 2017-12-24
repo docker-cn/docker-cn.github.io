@@ -1,8 +1,8 @@
 ---
-description: Home page for Docker's documentation
+description: Docker文档主页 Home page for Docker's documentation
 keywords: Docker, documentation, manual, guide, reference, api, samples
 landing: true
-title: Docker Documentation
+title: Docker 文档 Documentation
 notoc: true
 notags: true
 ---
@@ -11,25 +11,32 @@ notags: true
 <div class="row">
 <div markdown="1" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 block">
 
-## Get started with Docker
+## 从头开始用Docker Get started with Docker
+
+尝试使用我们的新的帮助，该帮助包含如何写第一个APP，以及数据存储，网络配置，和Swarm集群，
+最后你的APP会运行在生产机器上。总的阅读时间控制在了一个小时
 
 Try our new multi-part walkthrough that covers writing your first app,
 data storage, networking, and swarms, and ends with your app running on
 production servers in the cloud. Total reading time is less than an hour.
 
-[Get started with Docker](/get-started/){: class="button outline-btn"}
+[从头开始学Docker Get started with Docker](/get-started/){: class="button outline-btn"}
 
 </div>
 <div markdown="1" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 block">
 
-## Try Docker Enterprise Edition
+## 尝试使用Docker商业版 Try Docker Enterprise Edition
+
+使用Docker商业版来使你的解决方案满足生产需求，而且你可以使用商业版的管理仪表盘，安全扫描工具，
+LDAP登录集成，内容签名，多云环境部署，还有其他的很多。下面的链接可以允许你在不安装任何软件的
+情况下尝试在商业版上运行一个实例
 
 Run your solution in production with Docker Enterprise Edition and you'll get a
 management dashboard, security scanning, LDAP integration, content signing,
 multi-cloud support, and more. Click below to test-drive a running instance of
 Docker EE without installing anything.
 
-[Try Docker Enterprise Edition](https://dockertrial.com){: class="button outline-btn" onclick="ga('send', 'event', 'EE Trial Referral', 'Front Page', 'Click');"}
+[尝试使用Docker商业版 Try Docker Enterprise Edition](https://dockertrial.com){: class="button outline-btn" onclick="ga('send', 'event', 'EE Trial Referral', 'Front Page', 'Click');"}
 
 </div>
 </div>
@@ -37,32 +44,45 @@ Docker EE without installing anything.
 {% if site.edge == true %}
 {% capture ce-edge-section %}
 
-## Docker CE Edge
+## Docker 社区尝鲜版 Docker CE Edge
+
+Docker的社区长线渠道提供了每月的最新更新，这些更新允许你尝试最新的特性，而且还可以用来
+验证一些BUG的修复。尝鲜版的支持只能提供一个月，当一个新的尝鲜版本出现后，之前的尝鲜版本
+都不会给与更新
 
 The Docker CE Edge channel provides monthly releases which allow you to try
 new features of Docker and verify bug fixes quickly. Edge releases are only
 supported for one month, and a given Edge release will not receive any updates
 once a new edge release is available.
 
+稳定的发行版不会被放在尝鲜版渠道商，所以Linux用户还是要跟进稳定版的渠道
+
 Stable releases are not published to the Edge channel, so Linux repository users
 still need to subscribe to the Stable channel as well.
 
+Docker社区版不会收到商业支持
+
 Commercial support is not available for Docker CE.
+
+所有的关于Docker发行版的渠道以及支持的方法，可以参见，[Docker channels](/engine/installation/#docker-channels).
 
 For information about all Docker release channels and expectations about
 support, see [Docker channels](/engine/installation/#docker-channels).
 
 <!-- This button toggles the div below, and hides itself when clicked -->
-<a id="ce-edge-readmore-btn" onclick="$(this).hide(); ga('send', 'event', 'ce-edge-readmore', 'click', 'CE engagement');" data-target="#ce-edge-readmore" data-toggle="collapse" class="button outline-btn collapse in">Read more about Docker CE Edge releases</a>
+<a id="ce-edge-readmore-btn" onclick="$(this).hide(); ga('send', 'event', 'ce-edge-readmore', 'click', 'CE engagement');" data-target="#ce-edge-readmore" data-toggle="collapse" class="button outline-btn collapse in">点击查看更多关于Docker社区版 Read more about Docker CE Edge releases</a>
 
 <div markdown="1" id="ce-edge-readmore" class="collapse" data-target="#ce-edge-readmore-btn" data-toggle="collapse">
+
+这个页面包含的内容仅在Docker社区尝鲜版下可用。一些API和CLI反映了这些特性的更新，但是
+**对于一个特性的完整的文档可能要直到一个稳定的Docker 社区版被释放出来才可能完全可用**
 
 This page lists features that are only available in Docker CE Edge releases.
 Where applicable, the API and CLI reference documentation has been updated to
 reflect these features, but **full documentation for a given feature may not be
 available until a Docker CE Stable release incorporates the feature**.
 
-### Docker CE Edge new features
+### Docker社区版尝鲜版的新特性 Docker CE Edge new features
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" data-target="#1704">17.04</a></li>
@@ -71,14 +91,19 @@ available until a Docker CE Stable release incorporates the feature**.
 <div markdown="1" class="tab-content">
 <div markdown="1" id="1704" class="tab-pane fade in active">
 
-#### Docker CE Edge 17.04
+#### Docker社区尝鲜版17.04 Docker CE Edge 17.04
+
+以下的主要的特性和改变被包含在Docker社区尝鲜版17.04里，你可以继续阅读或者直接跳转到：
+[API and CLI](#api-and-cli),
+[Daemon](#daemon), [Dockerfile](#dockerfile), [Services](#services), or
+[Stacks](#stacks).
 
 The following major features and changes are included in Docker CE Edge 17.04.
 Continue reading, or go straight to [API and CLI](#api-and-cli),
 [Daemon](#daemon), [Dockerfile](#dockerfile), [Services](#services), or
 [Stacks](#stacks).
 
-[Read the full release notes](https://github.com/moby/moby/releases/tag/v17.04.0-ce){: target="_blank" class="_" }
+[阅读完整的发行版要点 Read the full release notes](https://github.com/moby/moby/releases/tag/v17.04.0-ce){: target="_blank" class="_" }
 
 ##### API and CLI
 
@@ -235,13 +260,16 @@ Continue reading, or go straight to [API and CLI](#api-and-cli),
 
 ### Docker Community Edition
 
+Docker社区版可以在很多的平台上使用，从桌面版系统到云端系统，到服务器系统。创建，然后分享这些容器，
+然后使开发能够使开发步骤从一个单独环境中自动化（？）。
+
 Get started with Docker and experimenting with container-based apps. Docker CE
 is available on many platforms, from desktop to cloud to server. Build and share
 containers and automate the development pipeline from a single environment.
 Choose the Edge channel to get access to the latest features, or the Stable
 channel for more predictability.
 
-[Learn more about Docker CE](/engine/installation/#platform-support-matrix){: class="button outline-btn"}
+[Docker社区版 Learn more about Docker CE](/engine/installation/#platform-support-matrix){: class="button outline-btn"}
 
 </div>
 <div markdown="1" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 block">
@@ -254,7 +282,7 @@ and supported to provide enterprises with the most secure container platform in
 the industry to modernize all applications. Docker EE Advanced comes with enterprise
 [add-ons](#docker-ee-add-ons) like UCP and DTR.
 
-[Learn more about Docker EE](/engine/installation/#platform-support-matrix){: class="button outline-btn"}
+[Docker商业版 Learn more about Docker EE](/engine/installation/#platform-support-matrix){: class="button outline-btn"}
 
 </div>
 </div><!-- end row -->
@@ -270,7 +298,7 @@ the industry to modernize all applications. Docker EE Advanced comes with enterp
                     <a href="docker-for-mac/"> <img src="../images/apple_48.svg" alt="Docker for Mac"> </a>
                 </div>
                 <h3 id="docker-for-mac"><a href="docker-for-mac/">Docker for Mac</a></h3>
-                <p>A native application using the macOS sandbox security model which delivers all Docker tools to your Mac.</p>
+                <p>运行在macOS上的安全沙盒程序，能够提供所有的Docker工具 A native application using the macOS sandbox security model which delivers all Docker tools to your Mac.</p>
             </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 block">
@@ -279,7 +307,7 @@ the industry to modernize all applications. Docker EE Advanced comes with enterp
                     <a href="docker-for-windows/"> <img src="../images/windows_48.svg" alt="Docker for Windows"> </a>
                 </div>
                 <h3 id="docker-for-windows"><a href="docker-for-windows/">Docker for Windows</a></h3>
-                <p>A native Windows application which delivers all Docker tools to your Windows computer.</p>
+                <p>Windows上面的Docker程序，提供了所有的Docker工具 A native Windows application which delivers all Docker tools to your Windows computer.</p>
             </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 block">
@@ -288,7 +316,7 @@ the industry to modernize all applications. Docker EE Advanced comes with enterp
                     <a href="engine/installation/linux/ubuntu/"> <img src="../images/linux_48.svg" alt="Docker for Linux"> </a>
                 </div>
                 <h3 id="docker-for-linux"><a href="engine/installation/linux/ubuntu/">Docker for Linux</a></h3>
-                <p>Install Docker on a computer which already has a Linux distribution installed.</p>
+                <p>你可以在一台已经安装了Docker发行版的机器上使用Docker Install Docker on a computer which already has a Linux distribution installed.</p>
             </div>
         </div>
     </div>
